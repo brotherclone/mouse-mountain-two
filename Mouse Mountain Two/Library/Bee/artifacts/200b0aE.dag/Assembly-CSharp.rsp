@@ -359,6 +359,8 @@
 "Assets/Scripts/MouseMountain/Board/HexGrid.cs"
 "Assets/Scripts/MouseMountain/Board/HexMesh.cs"
 "Assets/Scripts/MouseMountain/Board/HexMetrics.cs"
+"Assets/Scripts/MouseMountain/GameManager.cs"
+"Assets/Scripts/MouseMountain/InputManager.cs"
 "Assets/Scripts/MouseMountain/Interfaces/IDamagable.cs"
 "Assets/Scripts/MouseMountain/Interfaces/IInstructable.cs"
 "Assets/Scripts/MouseMountain/Interfaces/IMouseable.cs"

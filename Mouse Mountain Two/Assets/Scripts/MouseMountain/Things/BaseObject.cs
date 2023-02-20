@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using MouseMountain.Interfaces;
 using UnityEngine;
 
 namespace MouseMountain.Things
 {
-    public abstract class BaseObject : MonoBehaviour
+    public abstract class BaseObject : MonoBehaviour, IMouseable
     {
         public virtual string GetName()
         {
@@ -22,6 +23,10 @@ namespace MouseMountain.Things
 
         protected abstract void Added();
         protected abstract void Removed();
-        
+
+        public void Click(GameObject gameObject)
+        {
+            
+        }
     }
 }

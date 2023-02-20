@@ -49,7 +49,9 @@
      <Compile Include="Assets/Scripts/MouseMountain/Interfaces/IPlaceable.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/PlayerCharacter.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Actions/CarryAction.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/Things/Characters/TestMouse.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Actions/BaseAction.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/Board/HexCoordinates.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/UI/EventLogManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Inanimate.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Interfaces/IWieldable.cs" />
@@ -60,12 +62,12 @@
      <Compile Include="Assets/Scripts/MouseMountain/Things/Obstacle.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Character.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Interfaces/IInstructable.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/Board/HexMetrics.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Actions/MoveAction.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexGrid.cs" />
-     <Compile Include="Assets/Scripts/MouseMountain/Board/HexMetrics.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexMesh.cs" />
-     <Compile Include="Assets/Scripts/MouseMountain/Board/HexCoordinates.cs" />
-     <Compile Include="Assets/Scripts/MouseMountain/Things/Characters/TestMouse.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/GameManager.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/InputManager.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />

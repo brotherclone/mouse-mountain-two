@@ -7,7 +7,7 @@ using Unity.UI;
 using TMPro;
 
 namespace MouseMountain.Board {
-    public class HexGrid : MonoBehaviour, IMouseable
+    public class HexGrid : MonoBehaviour
     {
         public int width = 6;
         public int height = 6;
@@ -18,7 +18,7 @@ namespace MouseMountain.Board {
         HexMesh _hexMesh;
         public Color defaultColor = Color.white;
         public Color touchedColor = Color.magenta;
-        
+
         private void Awake()
         {
             _hexGridCanvas = GetComponentInChildren<Canvas>();
@@ -37,54 +37,24 @@ namespace MouseMountain.Board {
         {
             _hexMesh.Triangulate(_hexCells);
         }
-
-        private void Update()
+        public void TouchCell(int index)
         {
-            if (Input.GetMouseButton(0))
-            {
-                HandleInput();
-            }
-        }
-
-        void HandleInput()
-        {
-            Ray inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(inputRay, out hit))
-            {
-                TouchCell(hit.point);
-            }
-        }
-
-        void TouchCell(Vector3 position)
-        {
-            position = transform.InverseTransformDirection(position);
-            HexCoordinates coordinates = HexCoordinates.FromPosition(position);
-            //Debug.Log("tocuhed"+position + coordinates.ToString());
-            int index = coordinates.X + coordinates.Z * width + coordinates.Z / 2;
             HexCell cell = _hexCells[index];
-            Click(cell);
             cell.color = touchedColor;
             _hexMesh.Triangulate(_hexCells);
         }
-
-        private void Click(HexCell hexCell)
-        {
-            //Debug.Log("impl" + hexCell._HexCoordinates);
-        }
-        
         void CreateHexCell(int x, int z, int i)
         {
-            TMP_Text hexCellLabel = Instantiate<TMP_Text>(_hexCellLabel);
-            hexCellLabel.rectTransform.SetParent(_hexGridCanvas.transform, false);
+            TMP_Text hexCellLabel = Instantiate<TMP_Text>(_hexCellLabel, _hexGridCanvas.transform, false);
             Vector3 position;
             position.x =  (x + z * 0.5f - z / 2) * (HexMetrics.InnerRadius * 2f);
             position.y = 0f;
             position.z = z * (HexMetrics.OuterRadius * 1.5f);
             hexCellLabel.rectTransform.anchoredPosition = new Vector2(position.x, position.z);
             var hexCell = _hexCells[i] = Instantiate<HexCell>(cellPrefab);
-            hexCell.transform.SetParent(transform,false);
-            hexCell.transform.localPosition = position;
+            Transform hexCellTransform;
+            (hexCellTransform = hexCell.transform).SetParent(transform,false);
+            hexCellTransform.localPosition = position;
             hexCell._HexCoordinates = HexCoordinates.FromOffsetCoordinates(x, z);
             hexCellLabel.text = hexCell._HexCoordinates.ToStringOnSeparateLines();
             cellPrefab.color = defaultColor;

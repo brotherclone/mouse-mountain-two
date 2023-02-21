@@ -411,13 +411,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/DogKnight/Animator
+    - Assets/Scripts/MouseMountain
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/DogKnight/Animator
+  - Assets/Scripts/MouseMountain
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/gabrielwalsh/Sites/mouse-mountain-two/Mouse Mountain
     Two
@@ -425,9 +425,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: 2e600000
-    m_LastClickedID: 24622
-    m_ExpandedIDs: 00000000485c00004a5c00004c5c00004e5c0000
+    m_SelectedIDs: 6c5c0000
+    m_LastClickedID: 23660
+    m_ExpandedIDs: 00000000685c00006a5c00006c5c00006e5c00009a5c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -455,7 +455,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000485c00004a5c00004c5c00004e5c0000
+    m_ExpandedIDs: 00000000685c00006a5c00006c5c00006e5c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,9 +480,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 385a0000
-    m_LastClickedInstanceID: 23096
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: f6f1ffff
+    m_LastClickedInstanceID: -3594
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -583,9 +583,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 14f9ffff
-      m_LastClickedID: -1772
-      m_ExpandedIDs: 14f9ffff34fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 34fbffff845a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -867,9 +867,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 3.7600002, z: 14.11}
+    m_Target: {x: 0, y: 1.8800001, z: 7.055}
     speed: 2
-    m_Value: {x: 0, y: 3.7600002, z: 14.11}
+    m_Value: {x: 0, y: 1.8800001, z: 7.055}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -920,9 +920,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.00471436, y: 0.9735012, z: -0.2277435, w: -0.020153794}
   m_Size:
-    m_Target: 0.43206394
+    m_Target: 12.064813
     speed: 2
-    m_Value: 0.43206394
+    m_Value: 12.064813
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -61,6 +61,7 @@
      <Compile Include="Assets/Scripts/MouseMountain/Interfaces/IDamagable.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Actions/DefendAction.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Obstacle.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/CameraManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Character.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Interfaces/IInstructable.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/GameManager.cs" />
@@ -68,9 +69,9 @@
      <Compile Include="Assets/Scripts/MouseMountain/Actions/MoveAction.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexGrid.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexMesh.cs" />
-     <Compile Include="Assets/Scripts/MouseMountain/CameraManager.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+     <Folder Include="Assets/Docs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
@@ -86,6 +87,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/Prefabs" />
      <Folder Include="Assets/TextMesh Pro" />
+     <Folder Include="Assets/Docs/Design" />
      <Folder Include="Assets/DogKnight/Scene" />
      <Folder Include="Assets/Materials" />
      <Folder Include="Assets/DogKnight/Material" />

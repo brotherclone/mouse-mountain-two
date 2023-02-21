@@ -34,3 +34,22 @@ It would be great if the player didn't feel the need to restart the game, even a
 #### Encounters
 Encounters take place outside the mountain on missions and when the mountain is raided. It is turn based combat also on a hex board.
 
+## Prototype 0
+
+1. There is a simple menu screen with a start button. Clicking this loads the prototype level.
+2. The prototype level is defined by a JSON file. It defined the grid and places two objects:
+   1. A test mouse
+   2. The owl arch
+3. The camera is positioned over the center of the hex grid. The player can move the camera with WASD and mouse wheel. When an object is clicked it moves to focus on it and opens a corresponding UI panel. Pressing 'esc' returns the camera to its height of the default position with the selected item centered below it and restores the ability for the player to move the camera.
+
+### Art
+1. A skybox determined by the level
+2. Placeholder 3D
+### UI
+1. Menu
+2. Info on the selected object
+3. Sample buttons including a close button that works like 'esc'
+### Audio
+1. An ambient loop that is determined by the level
+2. Button click sounds
+3. A Camera whoosh sound

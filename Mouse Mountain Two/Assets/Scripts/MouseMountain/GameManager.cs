@@ -11,6 +11,7 @@ namespace MouseMountain
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
+        public LevelManager levelManager;
         public BaseObject selectedObject;
         public BaseObject inspectedObject;
         public GameObject clickedObject;
@@ -31,6 +32,7 @@ namespace MouseMountain
 
         void Start()
         {
+            levelManager = GetComponentInChildren<LevelManager>();
             inputManager = GetComponentInChildren<InputManager>();
             hexGrid = GetComponentInChildren<HexGrid>();
             cameraManager = GetComponentInChildren<CameraManager>();

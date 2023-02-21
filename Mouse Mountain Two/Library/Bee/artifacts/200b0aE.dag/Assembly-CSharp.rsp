@@ -358,6 +358,7 @@
 "Assets/Scripts/MouseMountain/InputManager.cs"
 "Assets/Scripts/MouseMountain/Interfaces/IMouseable.cs"
 "Assets/Scripts/MouseMountain/Interfaces/IPlaceable.cs"
+"Assets/Scripts/MouseMountain/LevelManager.cs"
 "Assets/Scripts/MouseMountain/Things/BaseObject.cs"
 "Assets/Scripts/MouseMountain/Things/Character.cs"
 "Assets/Scripts/MouseMountain/Things/Characters/OwlArch.cs"

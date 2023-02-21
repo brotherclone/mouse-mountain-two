@@ -58,7 +58,7 @@ namespace MouseMountain
                         Debug.Log("unknown right click");
                         break;
                 }
-            }
+            } 
         }
         private ClickType HandleClick()
         {

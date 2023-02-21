@@ -59,6 +59,7 @@
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexGrid.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexMesh.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Characters/OwlArch.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/LevelManager.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/Docs" />
@@ -88,14 +89,18 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets/Data/Characters" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/TextMesh Pro/Shaders" />
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
+     <Folder Include="Assets/Data/Levels" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Scripts/MouseMountain" />
      <Folder Include="Assets/DogKnight/Animator" />
+     <Folder Include="Assets/Data" />
+     <Folder Include="Assets/Data/Characters/Templates" />
      <Folder Include="Assets/Scripts/MouseMountain/Board" />
      <Folder Include="Assets/DogKnight/Animations" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
@@ -104,6 +109,7 @@
      <Folder Include="Assets/Scripts/MouseMountain/Interfaces" />
      <Folder Include="Assets/Shaders" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+     <None Include="Assets/Data/Levels/level_proto_0.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets/Scripts/MouseMountain/UI" />
      <Folder Include="Assets/Scenes" />

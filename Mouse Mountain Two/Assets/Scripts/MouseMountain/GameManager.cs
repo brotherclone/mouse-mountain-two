@@ -11,12 +11,12 @@ namespace MouseMountain
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
-        public Camera currentCamera;
         public BaseObject selectedObject;
         public BaseObject inspectedObject;
         public GameObject clickedObject;
         public InputManager inputManager;
         public HexGrid hexGrid;
+        public CameraManager cameraManager;
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -29,12 +29,13 @@ namespace MouseMountain
             }
         }
 
-        public void Start()
+        void Start()
         {
             inputManager = GetComponentInChildren<InputManager>();
             hexGrid = GetComponentInChildren<HexGrid>();
+            cameraManager = GetComponentInChildren<CameraManager>();
         }
-
+        
         public void HandleHexClick(int index)
         {
             hexGrid.TouchCell(index);

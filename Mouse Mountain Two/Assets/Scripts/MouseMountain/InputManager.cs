@@ -32,6 +32,8 @@ namespace MouseMountain
                 {
                     case ClickType.MMObject:
                         GameManager.Instance.selectedObject = clickedBaseObject;
+                        GameManager.Instance.cameraManager.currentCameraMode =
+                            CameraManager.CameraMode.FollowingSelected;
                         break;
                     case ClickType.GMObject:
                         GameManager.Instance.clickedObject = clickedGameObject;
@@ -60,7 +62,7 @@ namespace MouseMountain
         }
         private ClickType HandleClick()
         {
-            var ray = GameManager.Instance.currentCamera.ScreenPointToRay(Input.mousePosition);
+            var ray = GameManager.Instance.cameraManager.currentCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {

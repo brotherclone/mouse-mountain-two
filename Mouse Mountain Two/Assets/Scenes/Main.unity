@@ -650,7 +650,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1413643811
 PrefabInstance:
@@ -760,7 +760,6 @@ MonoBehaviour:
   _hexCellLabel: {fileID: 7463794363707679161, guid: 89d264f001d474afcbd0d4d36210c0e6, type: 3}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   touchedColor: {r: 1, g: 0, b: 1, a: 1}
-  hexCellIndex: 0
 --- !u!4 &1477873913
 Transform:
   m_ObjectHideFlags: 0
@@ -768,15 +767,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477873911}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -3.7600002, z: -14.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 101200341}
   - {fileID: 1074140329}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1545984618}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545984616
 GameObject:
@@ -826,6 +825,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 879618238}
+  - {fileID: 1477873913}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -44,6 +44,7 @@
      <Compile Include="Assets/Scripts/MouseMountain/Things/NonPlayerCharacter.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Interfaces/IMouseable.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Interfaces/IPlaceable.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/LevelManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/PlayerCharacter.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Characters/TestMouse.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexCoordinates.cs" />
@@ -56,15 +57,17 @@
      <Compile Include="Assets/Scripts/MouseMountain/Things/Character.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/GameManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexMetrics.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/Things/Characters/OwlArch.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexGrid.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexMesh.cs" />
-     <Compile Include="Assets/Scripts/MouseMountain/Things/Characters/OwlArch.cs" />
-     <Compile Include="Assets/Scripts/MouseMountain/LevelManager.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/Utilities/JSONUtils.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/Docs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
+     <Folder Include="Assets/Prefabs/Board" />
+     <Folder Include="Assets/Prefabs/Characters" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/Scripts/MouseMountain/Actions" />
@@ -81,26 +84,28 @@
      <Folder Include="Assets/Docs/Design" />
      <Folder Include="Assets/DogKnight/Scene" />
      <Folder Include="Assets/Materials" />
+     <Folder Include="Assets/Scripts/MouseMountain/Utilities" />
      <Folder Include="Assets/DogKnight/Material" />
      <Folder Include="Assets/DogKnight/Prefab" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+     <Folder Include="Assets/Scripts/MouseMountain/Definitions" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
-     <Folder Include="Assets/Data/Characters" />
+     <Folder Include="Assets/Resources/JSON/Characters" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/TextMesh Pro/Shaders" />
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
+     <Folder Include="Assets/Resources/JSON" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
-     <Folder Include="Assets/Data/Levels" />
+     <Folder Include="Assets/Resources/JSON/Levels" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Scripts/MouseMountain" />
      <Folder Include="Assets/DogKnight/Animator" />
-     <Folder Include="Assets/Data" />
-     <Folder Include="Assets/Data/Characters/Templates" />
+     <Folder Include="Assets/Resources/JSON/Characters/Templates" />
      <Folder Include="Assets/Scripts/MouseMountain/Board" />
      <Folder Include="Assets/DogKnight/Animations" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
@@ -109,7 +114,7 @@
      <Folder Include="Assets/Scripts/MouseMountain/Interfaces" />
      <Folder Include="Assets/Shaders" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
-     <None Include="Assets/Data/Levels/level_proto_0.json" />
+     <None Include="Assets/Resources/JSON/Levels/level_proto_0.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets/Scripts/MouseMountain/UI" />
      <Folder Include="Assets/Scenes" />
@@ -120,6 +125,7 @@
      <Folder Include="Assets/DogKnight" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
+     <Folder Include="Assets/Resources" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

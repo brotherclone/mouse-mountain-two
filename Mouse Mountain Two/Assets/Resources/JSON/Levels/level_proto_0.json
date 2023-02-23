@@ -1,0 +1,16 @@
+{
+  "title": "Prototype 0",
+  "skybox": "cave_1",
+  "ambient": "cave_sounds_1",
+  "tiles": [
+    {
+      "row": 1,
+      "column": 1,
+      "occupants": [
+        {
+          "objectKey": "OWLARCH"
+        }
+      ]
+    }
+  ]
+}

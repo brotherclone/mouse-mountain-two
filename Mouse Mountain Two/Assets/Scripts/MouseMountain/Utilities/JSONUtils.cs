@@ -4,9 +4,9 @@ namespace MouseMountain.Utilities
     using System.Collections.Generic;
     using UnityEngine;
 
-    public class JSONUtils
+    public class JsonUtils
     {
-        public static T ImportJSON<T>(string path)
+        public static T ImportJson<T>(string path)
         {
             TextAsset textAsset = Resources.Load<TextAsset>(path);
             return JsonUtility.FromJson<T>(textAsset.text);

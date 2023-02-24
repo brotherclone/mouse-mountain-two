@@ -12,17 +12,23 @@ namespace MouseMountain
     [System.Serializable]
     public class LevelTile
     {
-        public int row;
-        public int column;
+        public string color;
         public List<LevelTileOccupant> occupants;
     }
+    
+    [System.Serializable]
+    public class LevelRow
+    {
+        public List<LevelTile> row;
+    }
+    
     [System.Serializable]
     public class Level
     {
         public string title;
         public string skybox;
         public string ambient;
-        public List<LevelTile> tiles;
+        public List<LevelRow> tiles;
     }
     public class LevelManager : MonoBehaviour
     {
@@ -37,10 +43,10 @@ namespace MouseMountain
 
         private void Start()
         {
-            var test = JSONUtils.ImportJSON<Level>("JSON/Levels/level_proto_0");
+            var test = JsonUtils.ImportJson<Level>("JSON/Levels/level_proto_0");
             Debug.Log(test.skybox);
-            Debug.Log(test.tiles[0].row);
-            Debug.Log(test.tiles[0].occupants[0].objectKey);
+            Debug.Log(test.tiles[0].row[0].color);
+            Debug.Log(test.tiles[0].row[0].occupants[0].objectKey);
         }
     }
 }

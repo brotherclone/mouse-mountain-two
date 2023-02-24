@@ -54,13 +54,13 @@
      <Compile Include="Assets/Scripts/MouseMountain/InputManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexCell.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/CameraManager.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/Utilities/JSONUtils.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Character.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/GameManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexMetrics.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Characters/OwlArch.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexGrid.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexMesh.cs" />
-     <Compile Include="Assets/Scripts/MouseMountain/Utilities/JSONUtils.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/Docs" />

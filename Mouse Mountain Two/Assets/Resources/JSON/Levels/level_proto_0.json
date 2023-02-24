@@ -4,11 +4,14 @@
   "ambient": "cave_sounds_1",
   "tiles": [
     {
-      "row": 1,
-      "column": 1,
-      "occupants": [
+      "row": [
         {
-          "objectKey": "OWLARCH"
+          "color": "pink",
+          "occupants": [
+            {
+              "objectKey": "OWLARCH"
+            }
+          ]
         }
       ]
     }

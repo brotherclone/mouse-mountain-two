@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace MouseMountain.Board
 {
     public class HexCell : MonoBehaviour
     {
-        public HexCoordinates _HexCoordinates;
+        public HexCoordinates hexCoordinates;
         public Color color;
     }
 }

@@ -5,15 +5,16 @@ using MouseMountain.Interfaces;
 using UnityEngine;
 using Unity.UI;
 using TMPro;
+using UnityEngine.Serialization;
 
 namespace MouseMountain.Board {
     public class HexGrid : MonoBehaviour
     {
-        public int width = 6;
-        public int height = 6;
+        public int width;
+        public int height;
         public HexCell cellPrefab;
         private HexCell[] _hexCells;
-        public TMP_Text _hexCellLabel;
+        [FormerlySerializedAs("_hexCellLabel")] public TMP_Text hexCellLabel;
         Canvas _hexGridCanvas;
         HexMesh _hexMesh;
         public Color defaultColor = Color.white;
@@ -23,6 +24,12 @@ namespace MouseMountain.Board {
         {
             _hexGridCanvas = GetComponentInChildren<Canvas>();
             _hexMesh = GetComponentInChildren<HexMesh>();
+        }
+
+        public void CreateGrid(int rows, int columns)
+        {
+            width = rows;
+            height = columns;
             _hexCells = new HexCell[height * width];
             for (int z=0, i=0; z<height; z++)
             {
@@ -45,7 +52,7 @@ namespace MouseMountain.Board {
         }
         void CreateHexCell(int x, int z, int i)
         {
-            TMP_Text hexCellLabel = Instantiate<TMP_Text>(_hexCellLabel, _hexGridCanvas.transform, false);
+            TMP_Text hexCellLabel = Instantiate<TMP_Text>(this.hexCellLabel, _hexGridCanvas.transform, false);
             Vector3 position;
             position.x =  (x + z * 0.5f - z / 2) * (HexMetrics.InnerRadius * 2f);
             position.y = 0f;
@@ -55,8 +62,8 @@ namespace MouseMountain.Board {
             Transform hexCellTransform;
             (hexCellTransform = hexCell.transform).SetParent(transform,false);
             hexCellTransform.localPosition = position;
-            hexCell._HexCoordinates = HexCoordinates.FromOffsetCoordinates(x, z);
-            hexCellLabel.text = hexCell._HexCoordinates.ToStringOnSeparateLines();
+            hexCell.hexCoordinates = HexCoordinates.FromOffsetCoordinates(x, z);
+            hexCellLabel.text = hexCell.hexCoordinates.ToStringOnSeparateLines();
             cellPrefab.color = defaultColor;
         }
     }

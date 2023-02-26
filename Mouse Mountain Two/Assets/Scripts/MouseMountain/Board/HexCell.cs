@@ -7,5 +7,8 @@ namespace MouseMountain.Board
     {
         public HexCoordinates hexCoordinates;
         public Color color;
+        public int x;
+        public int z;
+        public int id;
     }
 }

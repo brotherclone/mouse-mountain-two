@@ -39,7 +39,26 @@ namespace MouseMountain.Board {
                 }
             }
         }
-        
+
+        public Level CreatGridFromLevel(Level level)
+        {
+            _hexCells = new HexCell[level.tiles.Count * level.tiles[0].row.Count];
+            for (int z= 0, i=0; z < level.tiles.Count; z++)
+            {
+                for (var x = 0; x < level.tiles[z].row.Count; x++)
+                {
+                    level.tiles[z].row[x].id = i;
+                    CreateHexCell(x,z, i++);
+                }
+            }
+            return level;
+        }
+
+        public Transform GetHexCellTransform(int index)
+        {
+            return _hexCells[index].transform;
+        }
+
         private void Start()
         {
             _hexMesh.Triangulate(_hexCells);
@@ -50,7 +69,8 @@ namespace MouseMountain.Board {
             cell.color = touchedColor;
             _hexMesh.Triangulate(_hexCells);
         }
-        void CreateHexCell(int x, int z, int i)
+        
+        public void CreateHexCell(int x, int z, int i)
         {
             TMP_Text hexCellLabel = Instantiate<TMP_Text>(this.hexCellLabel, _hexGridCanvas.transform, false);
             Vector3 position;
@@ -58,13 +78,16 @@ namespace MouseMountain.Board {
             position.y = 0f;
             position.z = z * (HexMetrics.OuterRadius * 1.5f);
             hexCellLabel.rectTransform.anchoredPosition = new Vector2(position.x, position.z);
-            var hexCell = _hexCells[i] = Instantiate<HexCell>(cellPrefab);
+            var hexCell = _hexCells[i] = Instantiate(cellPrefab);
             Transform hexCellTransform;
             (hexCellTransform = hexCell.transform).SetParent(transform,false);
             hexCellTransform.localPosition = position;
             hexCell.hexCoordinates = HexCoordinates.FromOffsetCoordinates(x, z);
             hexCellLabel.text = hexCell.hexCoordinates.ToStringOnSeparateLines();
             cellPrefab.color = defaultColor;
+            hexCell.x = x;
+            hexCell.z = z;
+            hexCell.id = i;
         }
     }
 }

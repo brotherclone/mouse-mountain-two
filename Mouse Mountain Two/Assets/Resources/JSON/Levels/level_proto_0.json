@@ -12,6 +12,62 @@
               "objectKey": "OWLARCH"
             }
           ]
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        }
+      ]
+    },
+    {
+      "row": [
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        }
+      ]
+    },
+    {
+      "row": [
+        {
+          "color": "pink",
+          "occupants": [
+            {
+              "objectKey": "TESTMOUSE"
+            }
+          ]
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
         }
       ]
     }

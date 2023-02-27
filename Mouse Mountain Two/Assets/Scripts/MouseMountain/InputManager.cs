@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using MouseMountain.Things;
 using MouseMountain.Board;
 using UnityEngine;
@@ -11,17 +8,17 @@ namespace MouseMountain
     {
         enum ClickType
         {
-         MMObject,
-         GMObject,
+         MmObject,
+         GmObject,
          HexCell,
          UIElement,
          None,
          Unknown
         }
 
-        private GameObject clickedGameObject;
-        private BaseObject clickedBaseObject;
-        private int clickedHexIndex;
+        private GameObject _clickedGameObject;
+        private BaseObject _clickedBaseObject;
+        private int _clickedHexIndex;
         
         public void Update()
         {
@@ -30,16 +27,16 @@ namespace MouseMountain
                 var leftClick = HandleClick();
                 switch (leftClick)
                 {
-                    case ClickType.MMObject:
-                        GameManager.Instance.selectedObject = clickedBaseObject;
+                    case ClickType.MmObject:
+                        GameManager.Instance.selectedObject = _clickedBaseObject;
                         GameManager.Instance.cameraManager.currentCameraMode =
                             CameraManager.CameraMode.FollowingSelected;
                         break;
-                    case ClickType.GMObject:
-                        GameManager.Instance.clickedObject = clickedGameObject;
+                    case ClickType.GmObject:
+                        GameManager.Instance.clickedObject = _clickedGameObject;
                         break;
                     case ClickType.HexCell:
-                        GameManager.Instance.HandleHexClick(clickedHexIndex);
+                        GameManager.Instance.HandleHexClick(_clickedHexIndex);
                         break;
                     default:
                         Debug.Log("unknown left click");
@@ -51,14 +48,14 @@ namespace MouseMountain
                 var rightClick = HandleClick();
                 switch (rightClick)
                 {
-                    case ClickType.MMObject:
-                        GameManager.Instance.inspectedObject = clickedBaseObject;
+                    case ClickType.MmObject:
+                        GameManager.Instance.inspectedObject = _clickedBaseObject;
                         break;
                     default:
                         Debug.Log("unknown right click");
                         break;
                 }
-            }
+            } 
         }
         private ClickType HandleClick()
         {
@@ -71,20 +68,20 @@ namespace MouseMountain
                 var mmObj = hit.collider.GetComponent<BaseObject>();
                 if (mmObj != null)
                 {
-                    clickedBaseObject = mmObj;
-                    return ClickType.MMObject;
+                    _clickedBaseObject = mmObj;
+                    return ClickType.MmObject;
                 }
                 if (gmObj != null && gmObj.name != "HexMesh")
                 {
-                    clickedGameObject = gmObj;
-                    return ClickType.GMObject;
+                    _clickedGameObject = gmObj;
+                    return ClickType.GmObject;
                 }
                 // ToDo : check type too
                 point = transform.InverseTransformDirection(point);
                 HexCoordinates coordinates = HexCoordinates.FromPosition(point);
-                Debug.Log("coords"+coordinates);
-                clickedHexIndex = coordinates.X + coordinates.Z * GameManager.Instance.hexGrid.width + coordinates.Z / 2;
-                if (clickedHexIndex  >= 0)
+                _clickedHexIndex = coordinates.X + coordinates.Z * GameManager.Instance.hexGrid.width + coordinates.Z / 2;
+                Debug.Log("what hex?" + _clickedHexIndex);
+                if (_clickedHexIndex  >= 0)
                 {
                     return ClickType.HexCell;
                 }

@@ -49,8 +49,8 @@ namespace MouseMountain.Board
             {
                 AddTriangle(
                     center,
-                    center + HexMetrics.corners[i],
-                    center + HexMetrics.corners[i + 1]
+                    center + HexMetrics.Corners[i],
+                    center + HexMetrics.Corners[i + 1]
                 );
                 AddTriangleColor(cell.color);
             }

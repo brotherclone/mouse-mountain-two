@@ -1,0 +1,75 @@
+{
+  "title": "Prototype 0",
+  "skybox": "cave_1",
+  "ambient": "cave_sounds_1",
+  "tiles": [
+    {
+      "row": [
+        {
+          "color": "pink",
+          "occupants": [
+            {
+              "objectKey": "OWLARCH"
+            }
+          ]
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        }
+      ]
+    },
+    {
+      "row": [
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        }
+      ]
+    },
+    {
+      "row": [
+        {
+          "color": "pink",
+          "occupants": [
+            {
+              "objectKey": "TESTMOUSE"
+            }
+          ]
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        },
+        {
+          "color": "pink",
+          "occupants": []
+        }
+      ]
+    }
+  ]
+}

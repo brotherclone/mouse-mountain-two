@@ -12,7 +12,7 @@ namespace MouseMountain.Interfaces
         }
         void Hover(HexCell hexCell)
         {
-            Debug.Log("Mouse Over "+ hexCell._HexCoordinates);
+            Debug.Log("Mouse Over "+ hexCell.hexCoordinates);
         }
         void Click(GameObject gameObject)
         {

@@ -369,6 +369,7 @@
 "Assets/Scripts/MouseMountain/Things/PlayerCharacter.cs"
 "Assets/Scripts/MouseMountain/UI/EventLogManager.cs"
 "Assets/Scripts/MouseMountain/Utilities/JSONUtils.cs"
+"Assets/StartMenuManager.cs"
 -langversion:9.0
 
 /deterministic

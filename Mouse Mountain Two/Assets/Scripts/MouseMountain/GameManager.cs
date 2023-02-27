@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using MouseMountain.Things;
 using UnityEngine;
-using UnityEngine.UIElements;
 using MouseMountain.Board;
 
 namespace MouseMountain
@@ -11,6 +8,7 @@ namespace MouseMountain
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
+        public LevelManager levelManager;
         public BaseObject selectedObject;
         public BaseObject inspectedObject;
         public GameObject clickedObject;
@@ -31,11 +29,12 @@ namespace MouseMountain
 
         void Start()
         {
+            levelManager = GetComponentInChildren<LevelManager>();
             inputManager = GetComponentInChildren<InputManager>();
             hexGrid = GetComponentInChildren<HexGrid>();
             cameraManager = GetComponentInChildren<CameraManager>();
         }
-        
+
         public void HandleHexClick(int index)
         {
             hexGrid.TouchCell(index);

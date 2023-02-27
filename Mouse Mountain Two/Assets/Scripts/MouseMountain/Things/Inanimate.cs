@@ -1,9 +1,8 @@
-using System.Collections.Generic;
 using MouseMountain.Interfaces;
 
 namespace MouseMountain.Things
 {
-    public abstract class Inanimate: BaseObject, IDamagable, IMouseable, IPlaceable
+    public abstract class Inanimate: BaseObject,IPlaceable
     {
         protected override void Added()
         {

@@ -361,6 +361,7 @@
 "Assets/Scripts/MouseMountain/LevelManager.cs"
 "Assets/Scripts/MouseMountain/Things/BaseObject.cs"
 "Assets/Scripts/MouseMountain/Things/Character.cs"
+"Assets/Scripts/MouseMountain/Things/Characters/BaseCharacterCatalog.cs"
 "Assets/Scripts/MouseMountain/Things/Characters/OwlArch.cs"
 "Assets/Scripts/MouseMountain/Things/Characters/TestMouse.cs"
 "Assets/Scripts/MouseMountain/Things/Inanimate.cs"

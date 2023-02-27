@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using MouseMountain.Interfaces;
 using UnityEngine;
-using Unity.UI;
 using TMPro;
 using UnityEngine.Serialization;
 
@@ -69,10 +64,10 @@ namespace MouseMountain.Board {
             cell.color = touchedColor;
             _hexMesh.Triangulate(_hexCells);
         }
-        
-        public void CreateHexCell(int x, int z, int i)
+
+        private void CreateHexCell(int x, int z, int i)
         {
-            TMP_Text hexCellLabel = Instantiate<TMP_Text>(this.hexCellLabel, _hexGridCanvas.transform, false);
+            TMP_Text hexCellLabel = Instantiate(this.hexCellLabel, _hexGridCanvas.transform, false);
             Vector3 position;
             position.x =  (x + z * 0.5f - z / 2) * (HexMetrics.InnerRadius * 2f);
             position.y = 0f;

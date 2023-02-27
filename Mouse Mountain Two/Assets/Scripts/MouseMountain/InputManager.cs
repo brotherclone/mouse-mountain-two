@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using MouseMountain.Things;
 using MouseMountain.Board;
 using UnityEngine;
@@ -82,8 +79,8 @@ namespace MouseMountain
                 // ToDo : check type too
                 point = transform.InverseTransformDirection(point);
                 HexCoordinates coordinates = HexCoordinates.FromPosition(point);
-                Debug.Log("coords"+coordinates);
                 _clickedHexIndex = coordinates.X + coordinates.Z * GameManager.Instance.hexGrid.width + coordinates.Z / 2;
+                Debug.Log("what hex?" + _clickedHexIndex);
                 if (_clickedHexIndex  >= 0)
                 {
                     return ClickType.HexCell;

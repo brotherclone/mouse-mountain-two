@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using MouseMountain.Things;
 using UnityEngine;
-using UnityEngine.UIElements;
 using MouseMountain.Board;
 
 namespace MouseMountain
@@ -37,7 +34,7 @@ namespace MouseMountain
             hexGrid = GetComponentInChildren<HexGrid>();
             cameraManager = GetComponentInChildren<CameraManager>();
         }
-        
+
         public void HandleHexClick(int index)
         {
             hexGrid.TouchCell(index);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using MouseMountain.Interfaces;
 using UnityEngine;
@@ -6,16 +7,13 @@ namespace MouseMountain.Things
 {
     public abstract class BaseObject : MonoBehaviour, IMouseable
     {
+        public GameObject body;
+
         public virtual string GetName()
         {
             return "Mouse Mountain Base Object";
         }
-
-        public virtual int GetId()
-        {
-            return 0;
-        }
-
+ 
         public virtual List<string> GetCapabilities()
         {
             return new List<string>();
@@ -26,7 +24,7 @@ namespace MouseMountain.Things
 
         public void Click(GameObject gameObject)
         {
-            
+            Debug.Log("click");
         }
     }
 }

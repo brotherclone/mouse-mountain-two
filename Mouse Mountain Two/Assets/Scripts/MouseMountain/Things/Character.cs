@@ -1,7 +1,4 @@
-using System;
 using MouseMountain.Interfaces;
-using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace MouseMountain.Things
 {

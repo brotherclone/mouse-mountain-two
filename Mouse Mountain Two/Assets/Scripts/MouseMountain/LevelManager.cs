@@ -1,18 +1,19 @@
 using System;
 using System.Collections.Generic;
 using MouseMountain.Board;
+using MouseMountain.Things;
 using MouseMountain.Things.Characters;
 using UnityEngine;
 using MouseMountain.Utilities;
 
 namespace MouseMountain
 {
-    [System.Serializable]
+    [Serializable]
     public class LevelTileOccupant
     {
         public string objectKey;
     }
-    [System.Serializable]
+    [Serializable]
     public class LevelTile
     {
         public string color;
@@ -20,12 +21,12 @@ namespace MouseMountain
         public List<LevelTileOccupant> occupants;
     }
     
-    [System.Serializable]
+    [Serializable]
     public class LevelRow
     {
         public List<LevelTile> row;
     }
-    [System.Serializable]
+    [Serializable]
     public class Level
     {
         public string title;
@@ -37,25 +38,18 @@ namespace MouseMountain
     public class LevelManager : MonoBehaviour
     {
         private static string _jsonPath = "JSON/Levels/";
-        private Dictionary<int, string> _mountainLevelsBase = new Dictionary<int, string>();
-        private Dictionary<string, GameObject> _mouseMountainCharacters = new Dictionary<string, GameObject>();
-        public GameObject owlArch;
-        public GameObject testMouse;
+        private readonly Dictionary<int, string> _levelCatalog = new();
         public Level currentLevel;
         
-        // Find that level
-
         // Place the objects
         // Be able to delete the objects
         // Be able to delete the grid
 
         private void Awake()
         {
-            _mountainLevelsBase.Add(0, "level_proto_0");
-            _mouseMountainCharacters.Add("OWLARCH", owlArch);
-            _mouseMountainCharacters.Add("TESTMOUSE", testMouse);
+            _levelCatalog.Add(0, "level_proto_0");
         }
-        
+
         private void Start()
         {
             currentLevel = LoadLevel(0);
@@ -65,7 +59,7 @@ namespace MouseMountain
 
         private Level LoadLevel(int levelNum)
         {
-            return JsonUtils.ImportJson<Level>(_jsonPath + _mountainLevelsBase[levelNum]);
+            return JsonUtils.ImportJson<Level>(_jsonPath + _levelCatalog[levelNum]);
         }
 
         private void PlaceObjects(Level level)
@@ -81,8 +75,11 @@ namespace MouseMountain
                     {
                         try
                         {
-                            var gameObject = _mouseMountainCharacters[occupant.objectKey];
-                            Instantiate(gameObject, tileTransform);
+                            var c = BaseCharacterCatalog.Instance.CharacterCatalog[occupant.objectKey];
+                            Instantiate(c, tileTransform);
+                            var b = c.GetComponent<BaseObject>();
+                            var m = b.GetName();
+                            Debug.Log(m);
                         }
                         catch (Exception e)
                         {

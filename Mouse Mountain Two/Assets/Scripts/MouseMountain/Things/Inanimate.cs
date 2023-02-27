@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using MouseMountain.Interfaces;
 
 namespace MouseMountain.Things

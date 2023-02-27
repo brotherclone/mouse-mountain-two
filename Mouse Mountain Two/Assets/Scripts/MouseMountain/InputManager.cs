@@ -1,7 +1,7 @@
 using MouseMountain.Things;
 using MouseMountain.Board;
 using UnityEngine;
-
+// ABSTRACTION
 namespace MouseMountain
 {
     public class InputManager: MonoBehaviour
@@ -55,7 +55,23 @@ namespace MouseMountain
                         Debug.Log("unknown right click");
                         break;
                 }
-            } 
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                GameManager.Instance.cameraManager.currentCameraMode = GameManager.Instance.cameraManager.currentCameraMode == CameraManager.CameraMode.FollowingSelected ? CameraManager.CameraMode.ResetToPreviousObjectOnBoardCenter : CameraManager.CameraMode.ResetToBoardCenter;
+            }
+
+            if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f)
+            {
+                GameManager.Instance.cameraManager.currentCameraMode =
+                    CameraManager.CameraMode.PlayerControl;
+                AudioManager.Instance.PlayFX();
+            }
+            else
+            {
+                AudioManager.Instance.StopFX();
+            }
         }
         private ClickType HandleClick()
         {

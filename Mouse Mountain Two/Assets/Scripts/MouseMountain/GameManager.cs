@@ -15,6 +15,7 @@ namespace MouseMountain
         public InputManager inputManager;
         public HexGrid hexGrid;
         public CameraManager cameraManager;
+        
         private void Awake()
         {
             if (Instance != null && Instance != this)

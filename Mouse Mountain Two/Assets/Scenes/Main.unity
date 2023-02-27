@@ -690,8 +690,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1870380796}
   - component: {fileID: 1870380797}
+  - component: {fileID: 1870380798}
   m_Layer: 0
-  m_Name: CharacterCatalog
+  m_Name: Catalogs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,6 +727,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owlArch: {fileID: 2051081954515125366, guid: 7bd6b30bd86c641ac9481d2497bef4a6, type: 3}
   testMouse: {fileID: 2755703824437245569, guid: 936a3e4c0548242e8871bab4027266d7, type: 3}
+--- !u!114 &1870380798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870380795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d24ba92f34451e8c9acacbebfc78c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cave1Material: {fileID: 2100000, guid: 884cffa0a1e2d4b86bb39d77a45f660c, type: 2}
+  otherMaterial: {fileID: 2100000, guid: d56c4043070d54e42b6ff5baa4277ef9, type: 2}
+  caveAmbientSound: {fileID: 8300000, guid: 24e1105f73d2c4f74bcb610ba28ea452, type: 3}
 --- !u!1 &2114641615
 GameObject:
   m_ObjectHideFlags: 0

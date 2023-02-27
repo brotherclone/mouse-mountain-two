@@ -40,7 +40,8 @@ namespace MouseMountain
         private static string _jsonPath = "JSON/Levels/";
         private readonly Dictionary<int, string> _levelCatalog = new();
         public Level currentLevel;
-        
+        private Material _currentSkybox;
+        private AudioClip _currentAmbientSound;
         // Place the objects
         // Be able to delete the objects
         // Be able to delete the grid
@@ -54,9 +55,16 @@ namespace MouseMountain
         {
             currentLevel = LoadLevel(0);
             currentLevel = GameManager.Instance.hexGrid.CreatGridFromLevel(currentLevel);
+            _currentSkybox = BaseEnvironmentCatalog.Instance.SkyboxCatalog[currentLevel.skybox];
+            _currentAmbientSound = BaseEnvironmentCatalog.Instance.AmbientLoopCatalog[currentLevel.ambient];
+            if (_currentAmbientSound.LoadAudioData())
+            {
+                AudioManager.Instance.PlayAmbient(_currentAmbientSound);
+            }
+            RenderSettings.skybox = _currentSkybox;
             PlaceObjects(currentLevel);
         }
-
+        
         private Level LoadLevel(int levelNum)
         {
             return JsonUtils.ImportJson<Level>(_jsonPath + _levelCatalog[levelNum]);

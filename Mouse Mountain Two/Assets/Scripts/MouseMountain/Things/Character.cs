@@ -6,7 +6,7 @@ namespace MouseMountain.Things
     {
         public string firstName;
         public string familyName;
-
+// POLYMORPHISM
        public override string GetName()
         {
             return $"{firstName} {familyName}";

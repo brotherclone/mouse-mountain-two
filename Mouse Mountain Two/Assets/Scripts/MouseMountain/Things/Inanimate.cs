@@ -1,5 +1,5 @@
 using MouseMountain.Interfaces;
-
+// INHERITANCE
 namespace MouseMountain.Things
 {
     public abstract class Inanimate: BaseObject,IPlaceable

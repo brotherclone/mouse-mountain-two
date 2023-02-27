@@ -51,6 +51,7 @@
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexCoordinates.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/UI/EventLogManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/Inanimate.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/StartMenuManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Things/BaseObject.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/InputManager.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexCell.cs" />
@@ -62,7 +63,8 @@
      <Compile Include="Assets/Scripts/MouseMountain/Things/Characters/OwlArch.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexGrid.cs" />
      <Compile Include="Assets/Scripts/MouseMountain/Board/HexMesh.cs" />
-     <Compile Include="Assets/StartMenuManager.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/Board/BaseEnvironmentCatalog.cs" />
+     <Compile Include="Assets/Scripts/MouseMountain/AudioManager.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/Docs" />
@@ -90,7 +92,6 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
-     <Folder Include="Assets/Resources/JSON/Characters" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/TextMesh Pro/Shaders" />

@@ -348,6 +348,8 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/MouseMountain/AudioManager.cs"
+"Assets/Scripts/MouseMountain/Board/BaseEnvironmentCatalog.cs"
 "Assets/Scripts/MouseMountain/Board/HexCell.cs"
 "Assets/Scripts/MouseMountain/Board/HexCoordinates.cs"
 "Assets/Scripts/MouseMountain/Board/HexGrid.cs"
@@ -359,6 +361,7 @@
 "Assets/Scripts/MouseMountain/Interfaces/IMouseable.cs"
 "Assets/Scripts/MouseMountain/Interfaces/IPlaceable.cs"
 "Assets/Scripts/MouseMountain/LevelManager.cs"
+"Assets/Scripts/MouseMountain/StartMenuManager.cs"
 "Assets/Scripts/MouseMountain/Things/BaseObject.cs"
 "Assets/Scripts/MouseMountain/Things/Character.cs"
 "Assets/Scripts/MouseMountain/Things/Characters/BaseCharacterCatalog.cs"
@@ -369,7 +372,6 @@
 "Assets/Scripts/MouseMountain/Things/PlayerCharacter.cs"
 "Assets/Scripts/MouseMountain/UI/EventLogManager.cs"
 "Assets/Scripts/MouseMountain/Utilities/JSONUtils.cs"
-"Assets/StartMenuManager.cs"
 -langversion:9.0
 
 /deterministic
